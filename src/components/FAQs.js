@@ -1,8 +1,5 @@
 import { useState } from "react";
 import "./styles.css";
-// import { FaTimes } from "react-icons/fa";
-// import { BsPlusLg } from "react-icons/bs";
-// import Faq from "react-faq-component";
 
 const data = [
   {
@@ -40,27 +37,6 @@ const data = [
   },
 ];
 
-// const styles = {
-//   bgColor: "black",
-//   rowTitleColor: "#fff",
-//   rowTitleTextSize: "26px",
-//   rowContentColor: "#fff",
-//   rowContentTextSize: "18px",
-//   arrowColor: "white",
-//   rowContentPaddingBottom: "10px",
-//   rowContentPaddingTop: "10px",
-//   // transitionDuration: "0",
-// };
-
-// const config = {
-//   // animate: true,
-//   // openOnload: 0,
-//   // arrowIcon: "v",
-//   // tabFocus: true,
-//   // expandIcon: "+",
-//   // collapseIcon: "x",
-// };
-
 export default function Faqs() {
   const [selected, setSelected] = useState(null);
 
@@ -76,14 +52,14 @@ export default function Faqs() {
       <h2 className="text-[26px] md:text-[56px] pb-[1rem]">
         Frequently Asked Questions
       </h2>
-      <div className="w-full md:w-[815px]">
+      <div className="w-full md:w-[815px] flex flex-col gap-[10px]">
         {data.map((item, i) => (
-          <div className="mb-[10px] h-full md:px-[40px] px-[20px] bg-[#303030] text-[26px] relative">
+          <div className=" bg-[#303030] text-[26px] relative" key={i}>
             <div
-              className="flex justify-between items-center cursor-pointer h-[75px]"
+              className="flex justify-between items-center cursor-pointer h-[48px] md:h-[75px] px-[20px] md:px-[40px]"
               onClick={() => toggle(i)}
             >
-              <h2 className="text-[20px] md:text-[28px]">{item.question}</h2>
+              <h2 className="text-[18px] md:text-[25px]">{item.question}</h2>
               <span>
                 {selected === i ? (
                   <svg
@@ -119,6 +95,7 @@ export default function Faqs() {
               </span>
             </div>
             <div className={selected === i ? "content show" : "content"}>
+              <div className="devider"></div>
               {item.answer}
             </div>
           </div>
@@ -127,14 +104,19 @@ export default function Faqs() {
       <h3 className="text-white mx-[3rem] md:mx-[0px] text-center md:text-left md:text-[20px] pt-[2rem] pb-[1rem]">
         Ready to watch? Enter your email to create or restart your membership.
       </h3>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row relative">
         <input
-          type="email"
-          name="email"
-          id="email"
-          className="w-[320px] py-[10px] md:py-[0px] md:h-[70px] md:w-[500px] pl-[10px] focus:outline-none"
-          placeholder="Email address"
+          type="text"
+          id="floating_filled"
+          class="block w-[320px] py-[10px] md:py-[0px] md:h-[70px] md:w-[500px] pl-[10px] text-sm text-gray-900 appearance-none bg-white focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" "
         />
+        <label
+          for="floating_filled"
+          class="absolute text-[12px] md:text-[18px] text-stone-700/70 duration-300 transform -translate-y-4 scale-75 md:top-5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 pointer-events-none md:peer-placeholder-shown:translate-y-0 peer-placeholder-shown:translate-y-2 peer-focus:scale-75 md:peer-focus:-translate-y-4 peer-focus:-translate-y-0"
+        >
+          Email address
+        </label>
         <div className="flex justify-center md:justify-left relative">
           <button className="bg-[#E50914] text-[#fff] md:w-[250px] pr-[24px] text-[18px] px-[10px] py-[5px] md:px-[0px] md:py-[0px] md:text-[28px] mt-[1rem] md:mt-[0px]">
             Get Started

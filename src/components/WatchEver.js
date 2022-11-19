@@ -23,6 +23,7 @@ export default function WatchEver() {
               autoPlay
               muted
               loop
+              playsInline
               className="w-[230px] md:w-[340px] mb-[5rem] md:mb-[8rem]"
               src={TvVideo}
             ></video>

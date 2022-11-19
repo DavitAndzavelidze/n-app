@@ -30,24 +30,15 @@ export default function Header() {
               <input
                 type="text"
                 id="floating_filled"
-                class="block h-[48px] w-[351px] md:h-[70px] md:w-[500px] pl-[10px] text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                class="block h-[48px] w-[351px] md:h-[70px] md:w-[500px] pl-[10px] text-sm text-gray-900 appearance-none bg-white focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
               />
               <label
                 for="floating_filled"
-                class="absolute text-[18px] text-stone-700/70 duration-300 transform -translate-y-4 scale-75 top-5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 pointer-events-none peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-5"
+                class="absolute text-[16px] md:text-[18px] text-stone-700/70 duration-300 transform -translate-y-4 scale-75 md:top-5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 pointer-events-none peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 md:peer-focus:-translate-y-5"
               >
                 Email address
               </label>
-              {/* <span className="pointer-events-none absolute top-24px left-0 ml-[10px] text-stone-700/70">
-                Email address
-              </span>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                className="h-[48px] w-[351px] md:h-[70px] md:w-[500px] pl-[10px] focus:outline-none"
-              /> */}
             </div>
             <div className="flex justify-center relative">
               <button className="bg-[#E50914] text-[#fff] w-[136px] md:w-[250px] pr-[12px] md:pr-[24px] text-[18px] py-[8px] md:text-[28px] mt-[1rem] md:mt-[0px]">

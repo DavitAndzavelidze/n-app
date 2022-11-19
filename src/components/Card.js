@@ -15,7 +15,7 @@ export default function Card() {
           </p>
         </div>
         <div className="relative">
-          <div className="md:w-[530px] mt-[-3rem] md:mt-[0px] px-[10px] md:px-[0px]">
+          <div className="md:w-[530px] mt-[-3rem] md:mt-[0px]">
             <img src={TvBg} alt="tv" />
           </div>
           <div className="absolute top-0 left-0 flex justify-center h-full w-full z-[-1]">
@@ -23,7 +23,8 @@ export default function Card() {
               autoPlay
               muted
               loop
-              className="md:w-[397px] w-[290px] mb-[3.6rem] md:mb-[10px]"
+              playsInline
+              className="md:w-[390px] w-[290px] mb-[3.6rem] md:mb-[10px]"
               src={TvVideo}
             ></video>
           </div>
