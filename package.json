@@ -1,7 +1,7 @@
 {
-  "name": "netflix-app",
+  "name": "n-app",
   "version": "0.1.0",
-  "homepage": "https://davitandzavelidze.github.io/netflix-clone",
+  "homepage": "https://davitandzavelidze.github.io/n-app",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.4",
